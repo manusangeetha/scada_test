@@ -1,0 +1,159 @@
+/* Dashboard.css */
+.dashboard {
+  padding: 10px; /* General padding for the dashboard */
+}
+
+.dashboard h2 {
+  color: hwb(140 16% 38%); /* Color for headings */
+}
+
+.dashboard p {
+  margin: 10px 0; /* Margin for paragraphs */
+}
+
+/* Grid layout for AHUs */
+.ahu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+  gap: 10px; /* Space between grid items */
+}
+
+.ahu-box {
+  border: 1px solid hsl(135, 71%, 44%); /* Border for AHU boxes */
+  padding: 20px; /* Inner padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.ahu-box.on {
+  background-color: hwb(134 25% 52%); /* Light green for on state */
+}
+
+.ahu-box.off {
+  background-color: hsl(355, 40%, 46%); /* Light red for off state */
+}
+
+/* Controls for editing AHUs */
+.controls {
+  margin-top: 10px; /* Space above controls */
+}
+
+.controls input {
+  width: 60px; /* Width for input fields */
+  margin-right: 10px; /* Space to the right of inputs */
+}
+
+/* Table styles */
+.table-fixed {
+  width: 100%; /* Full width for table */
+  table-layout: fixed; /* Prevents resizing of columns */
+}
+
+.table-fixed thead {
+  position: sticky; /* Keeps the header fixed on scroll */
+  top: 0; /* Align to the top */
+  background-color: hsl(327, 82%, 50%); /* Background for header */
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.table-responsive {
+  max-height: 400px; /* Set maximum height for the table */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Card styles */
+.card {
+  border: none; /* Remove default border */
+  background-image: url(''); /* Background image for cards */
+  background-size: cover; /* Ensure background covers the entire card */
+}
+
+.card-logo {
+  background-image: url(''); /* Correct path for logo */
+  background-size: cover; /* Ensure the logo covers the card */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the page layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Fixed header */
+.header {
+  background-color: #343a40; /* Dark color for header */
+  color: rgb(143, 204, 102);
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main content layout */
+.main {
+  display: flex;
+  flex: 1;
+  padding-top: 60px; /* Adjust padding based on header height */
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  position: fixed;
+  top: 60px; /* Below the header */
+  bottom: 0;
+  overflow-y: auto;
+  height: calc(100vh - 60px); /* Adjust height based on header height */
+  z-index: 999;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  margin-left: 200px; /* Sidebar width */
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100px; /* Smaller width for mobile */
+  }
+
+  .content {
+      margin-left: 100px;
+  }
+
+  .sidebar, .content {
+      padding: 5px;
+  }
+
+  .header {
+      padding: 5px 10px;
+  }
+}
+/* Dashboard.css */
+
+h2 {
+  margin: 20px 0; /* Space above and below the heading */
+}
+
+.table {
+  margin-top: 10px; /* Space above the table */
+}
+
